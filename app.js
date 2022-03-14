@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.raw());
 app.use("/", router);
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 init();
 app.listen(port, () => {
