@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Nodejs server for professional website",
   "main": "index.js",
+  "proxy":"https://gourav-node-server.herokuapp.com",
   "scripts": {
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
