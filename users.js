@@ -51,8 +51,11 @@ users.put("/:id", async (req, res) => {
     const _id = req.params.id;
     var data = req.body;
     data._id = _id;
-    await userModel.updateOne({ _id }, data);
-    res.send(data);
+    const response = await userModel.updateOne({ _id }, data);
+    if (response.matchedCount > 0) res.send(data);
+    else {
+      res.status(404).send("User Not Found!!");
+    }
   } catch (error) {
     console.error(error);
     res.status(500).send(error);
