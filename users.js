@@ -68,7 +68,7 @@ const upload = multer({
   },
 });
 users.post("/upload", upload.single("uploaded_file"), function (req, res) {
-  res.send(req.file.originalname + " uploaded successfully");
+  res.send("file uploaded successfully");
 });
 
 users.delete("/:id", async (req, res) => {

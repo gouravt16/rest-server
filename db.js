@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const username = "gouravt16";
-const password = "Impossible888";
-const cluster = "professional.acozh";
+const username = "admin";
+const password = "admin";
+const cluster = "myatlasclusteredu.e8spqcl";
 const database = "Professional";
 
 const init = () => {
@@ -23,4 +23,4 @@ const init = () => {
   }
 };
 
-module.exports = init;
+export default init;
