@@ -34,7 +34,7 @@ app.use("/", (req, res, next) => {
       jwt.verify(token, tokenKey, (err, user) => {
         console.log(err);
         if (err) return res.sendStatus(403);
-        console.log('user: ',user)
+        console.log('user: ',user.email)
         req.user = user;
         next();
       });
